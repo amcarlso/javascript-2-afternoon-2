@@ -132,6 +132,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
+firstItem = []
+secondItem = []
+totalArray = [firstItem, secondItem]
+function divider(numbersArray) {
+  for (let i = 0; i < numbersArray.length; i++) {
+    if (numbersArray[i] % 2===0) {
+      firstItem.push(numbersArray[i])
+    } else if (numbersArray[i] % 2 !== 0) {
+      secondItem.push(numbersArray[i])
+    }
+  }
+  return totalArray
+}
 
 
 
