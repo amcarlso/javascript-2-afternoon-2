@@ -166,6 +166,11 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+numPresent;
+function finder(arr) {
+  let randomNum = getRandomArbitrary()
+    return arr.indexOf(randomNum) === -1 ? false: true; 
+}
 
 
 
@@ -195,6 +200,16 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+itemRemoved = [];
+function removeItem(myGroceryList, item) {
+  if (myGroceryList.indexOf(item) == true) {
+    return itemRemoved = myGroceryList.splice(item, 1)
+  }
+}
+
+function addItem(myGroceryList, item) {
+  return myGroceryList.push(item)
+}
 
 
 
@@ -205,6 +220,12 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function maker(arr) {
+  for (let i = 1; i = 215; i++) {
+    [i]
+  }
+  return arr
+}
 
 
 
@@ -221,6 +242,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
+
+function addTen(numbers) {
+  numbersPlusTen = []
+  for (let i = 0; i <numbers.length; i++) {
+    numbersPulsTen.push(Number(numbers[i]) + 10)
+  }
+}
 
 
 
@@ -246,6 +274,9 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function longer(arr1, arr2) {
+  arr1.length > arr2.length ? arr1 : arr2
+}
 
 
 
@@ -258,6 +289,17 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function both(arr1, arr2) {
+  newArray = []
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j <arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        newArray.push(arr1[i])
+      }
+    }
+  }
+  return newArray
+}
 
 
 
