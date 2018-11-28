@@ -132,15 +132,15 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-firstItem = []
-secondItem = []
-totalArray = [firstItem, secondItem]
+let evenNums = []
+let oddNums = []
+totalArray = [evenNums, oddNums]
 function divider(numbersArray) {
   for (let i = 0; i < numbersArray.length; i++) {
     if (numbersArray[i] % 2===0) {
-      firstItem.push(numbersArray[i])
+      evenNums.push(numbersArray[i])
     } else if (numbersArray[i] % 2 !== 0) {
-      secondItem.push(numbersArray[i])
+      oddNums.push(numbersArray[i])
     }
   }
   return totalArray
@@ -174,6 +174,8 @@ function finder(arr) {
 
 
 
+
+
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
@@ -202,13 +204,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Code Here
 itemRemoved = [];
 function removeItem(myGroceryList, item) {
-  if (myGroceryList.indexOf(item) == true) {
-    return itemRemoved = myGroceryList.splice(item, 1)
+  if(!myGroceryList  || !item) {
+    return []
   }
+  for (let i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === item) {
+      myGroceryList.splice(i, 1)
+    }
+  }
+  return myGroceryList
 }
 
 function addItem(myGroceryList, item) {
-  return myGroceryList.push(item)
+  if(!myGroceryList || !item) {
+    return []
+  }
+    myGroceryList.push(item)
+    return myGroceryList
 }
 
 
@@ -221,10 +233,11 @@ function addItem(myGroceryList, item) {
 
 //Code Here
 function maker(arr) {
-  for (let i = 1; i = 215; i++) {
-    arr.push(i)
+  let newArr = []
+  for (let i = 1; i < 216; i++) {
+    newArr.push(i)
   }
-  return arr
+  return newArr
 }
 
 
@@ -246,8 +259,9 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 function addTen(numbers) {
   numbersPlusTen = []
   for (let i = 0; i <numbers.length; i++) {
-    numbersPulsTen.push(Number(numbers[i]) + 10)
+    numbersPlusTen.push(Number(numbers[i]) + 10)
   }
+  return numbersPlusTen
 }
 
 
@@ -275,7 +289,11 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 function longer(arr1, arr2) {
-  arr1.length > arr2.length ? arr1 : arr2
+  if (arr1.length > arr2.length) {
+    return arr1
+  } else {
+      return arr2
+  }
 }
 
 
@@ -339,7 +357,14 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+function objPusher(array, user, user2, user3, user4) {
+  array.push(user)
+  array.push(user2)
+  array.push9(user3)
+  return array
+}
+objPusher(devMountainEmployees, tyler, cahlan, ryan, colt)
+console.log(devMountainEmployees)//Code Here
 
 
 
@@ -348,7 +373,15 @@ var colt = {
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+function remover(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === Cahlan) {
+      arr.splice(i, 1)
+    }
+  }
+}
+  //Code Here
+
 
 
 
@@ -360,7 +393,7 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+let users = []//Code Here
 
 
 
@@ -378,7 +411,26 @@ var user1 = {
     username: 'infiniteLoop'
 };
 // Do not edit the code above.
+let user2 = {
+  name: 'Jimmy Fallon Sr',
+  email: 'jimmytheman@mail.fake',
+password: 'thetonightdoughisgood',
+username: 'JFS'
+}
 
+let user3 = {
+  name: 'Jake',
+  email: 'jakeiscool@mail.fake',
+password: 'gojake',
+username: 'jakeycakes'
+}
+
+function objPusher(array) {
+  array.push(user1)
+  array.push(user2)
+  array.push9(user3)
+  return array
+}
 //Code Here
 
 
